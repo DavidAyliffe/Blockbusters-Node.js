@@ -53,7 +53,7 @@ blockbusters-api/
 ├── services/
 │   └── *.js
 └── package.json
-
+```
 ## ⚙️ Installation
 
 1️⃣ Clone the repository
@@ -61,20 +61,24 @@ git clone <repo-url>
 cd blockbusters-api
 
 2️⃣ Install dependencies
+```text
 npm install
 npm install morgan
-
+```
 ## 🔐 Environment Variables
 Create a .env file in the project root:
+```text
 DB_HOST=localhost
 DB_USER=root
 DB_PASSWORD=yourpassword
 DB_NAME=blockbusters
 PORT=3000
 JWT_SECRET=supersecretkey
+```
 ⚠️ Never commit .env to version control.
 
 ## ▶️ Running the Server
+```text
 Development
 node server.js
 
@@ -82,8 +86,9 @@ Production (recommended)
 pm2 delete blockbusters-api
 pm2 start server.js --name blockbusters-api
 pm2 logs blockbusters-api
-
+```
 ## 🔑 Authentication
+```text
 Login
 POST /api/auth/login
 Request body
@@ -99,8 +104,9 @@ Response
 Include the token in all protected routes:
 
 Authorization: Bearer <token>
-
+```
 ## 📚 API Endpoints
+```text
 Actor
 GET    /api/actors
 GET    /api/actors/:id
@@ -149,11 +155,7 @@ GET    /api/store/:id
 POST   /api/store
 PUT    /api/store/:id
 DELETE /api/store/:id
-
-
-
-
-
+```
 ## 🍎 Swift Client Notes
 All endpoints return JSON
 JWT must be stored securely (e.g. Keychain)
