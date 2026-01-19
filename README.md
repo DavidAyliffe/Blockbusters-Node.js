@@ -80,11 +80,13 @@ JWT_SECRET=supersecretkey
 ⚠️ Never commit .env to version control.
 
 ## ▶️ Running the Server
-```text
 Development
+```text
 node server.js
+```
 
 Production (recommended)
+```
 pm2 delete blockbusters-api
 pm2 start server.js --name blockbusters-api
 pm2 logs blockbusters-api
