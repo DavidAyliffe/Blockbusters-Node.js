@@ -66,6 +66,9 @@ cd blockbusters-api
 ```text
 npm install
 npm install morgan
+npm install bcrypt
+npm install jsonwebtoken
+npm install dotenv
 ```
 ## 🔐 Environment Variables
 Create a .env file in the project root:
