@@ -57,7 +57,7 @@ blockbusters-api/
 ## ⚙️ Installation
 
 1️⃣ Clone the repository
-git clone <repo-url>
+git clone https://github.com/DavidAyliffe/Blockbusters-Node.js
 cd blockbusters-api
 
 2️⃣ Install dependencies
