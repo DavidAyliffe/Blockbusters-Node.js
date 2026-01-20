@@ -169,6 +169,12 @@ JWT must be stored securely (e.g. Keychain)
 Dates are returned as ISO 8601 strings
 IDs are integers matching MySQL primary keys
 
+## 🧪 Testing
+```
+curl -X POST http://localhost:3000/api/auth/login \
+  -H "Content-Type: application/json" \
+  -d '{"email":"student1@gmail.com","password":"password123"}'
+```  
 ## 🧠 Design Principles
 Explicit SQL (no generic “magic” CRUD)
 Clear separation of:
