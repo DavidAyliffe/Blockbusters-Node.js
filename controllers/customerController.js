@@ -1,4 +1,4 @@
-const service = require("../services/paymentService");
+const service = require("../services/customerService");
 
 exports.getAll = async (req, res) => { res.json(await service.getAll()); };
 
