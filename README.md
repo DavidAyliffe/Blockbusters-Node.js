@@ -187,11 +187,11 @@ Easy to extend for role-based permissions
 Suitable for teaching REST and client–server architecture
 
 ## 🔧 Future Improvements
-User accounts stored in MySQL
-Password hashing with bcrypt
-Role-based access control (staff / customer / admin)
-Pagination & filtering
-OpenAPI / Swagger documentation
+1. User accounts stored in MySQL
+2. Password hashing with bcrypt
+3. Role-based access control (staff / customer / admin)
+4. Pagination & filtering
+5. OpenAPI / Swagger documentation
 
 ## 📜 License
 This project is intended for educational use.
