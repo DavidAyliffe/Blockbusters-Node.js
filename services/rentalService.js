@@ -11,12 +11,12 @@ exports.getById = async (id) => {
 };
 
 exports.create = async ({ in_rental_date, in_inventory_id, in_customer_id, in_due_date, in_returned_date, in_staff_id }) => {
-  const [result] = await db.query( "INSERT INTO rental (rental_date, inventory_id, customer_id, due_date, returned_date, staff_id) VALUES (?)", [in_rental_date, in_inventory_id, in_customer_id, in_due_date, in_returned_date, in_staff_id] );
+  const [result] = await db.query( "INSERT INTO rental (rental_date, inventory_id, customer_id, due_date, returned_date, staff_id) VALUES (?, ?, ?, ?, ?, ?)", [in_rental_date, in_inventory_id, in_customer_id, in_due_date, in_returned_date, in_staff_id] );
   return { id: result.insertId, in_rental_date, in_inventory_id, in_customer_id, in_due_date, in_returned_date, in_staff_id };
 };
 
 exports.update = async (id, { in_rental_date, in_inventory_id, in_customer_id, in_due_date, in_returned_date, in_staff_id}) => {
-  await db.query( "UPDATE rental SET rental_date = ?, inventory_id = ?, customer_id = ?, due_date = ?, returned_date = ?, staff_id = ? WHERE rental_id = ?", [in_first_name, in_lastname, id] );
+  await db.query( "UPDATE rental SET rental_date = ?, inventory_id = ?, customer_id = ?, due_date = ?, returned_date = ?, staff_id = ? WHERE rental_id = ?", [in_rental_date, in_inventory_id, in_customer_id, in_due_date, in_returned_date, in_staff_id, id] );
   return { id, in_rental_date, in_inventory_id, in_customer_id, in_due_date, in_returned_date, in_staff_id };
 };
 

@@ -11,12 +11,12 @@ exports.getById = async (id) => {
 };
 
 exports.create = async ({ in_store_id, in_first_name, in_last_name, in_email, in_password_hash, in_dob, in_parent_id, in_sex, in_address_id, in_active }) => {
-	const [result] = await db.query( "INSERT INTO customer (store_id, first_name, last_name, email, password_hash, dob, parent_id, sex, address_id, active) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)", [in_manager_staff_id, in_name, in_address_id] );
+	const [result] = await db.query( "INSERT INTO customer (store_id, first_name, last_name, email, password_hash, dob, parent_id, sex, address_id, active) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)", [in_store_id, in_first_name, in_last_name, in_email, in_dob, in_parent_id, in_sex, in_address_id, in_active] );
   return { id: result.insertId, in_store_id, in_first_name, in_last_name, in_email, in_password_hash, in_dob, in_parent_id, in_sex, in_address_id, in_active };
 };
 
 exports.update = async (id, { in_store_id, in_first_name, in_last_name, in_email, in_dob, in_parent_id, in_sex, in_address_id, in_active}) => {
-  await db.query( "UPDATE customer SET first_name = ?, last_name = ?, email = ?, dob = ?, parent_id = ?, sex = ?, address_id = ?, active = ? WHERE customer_id = ?", [in_manager_staff_id, in_name, in_address_id, id] );
+  await db.query( "UPDATE customer SET store_id = ?, first_name = ?, last_name = ?, email = ?, dob = ?, parent_id = ?, sex = ?, address_id = ?, active = ? WHERE customer_id = ?", [in_store_id, in_first_name, in_last_name, in_email, in_dob, in_parent_id, in_sex, in_address_id, in_active, id] );
   return { id, in_store_id, in_first_name, in_last_name, in_email, in_dob, in_parent_id, in_sex, in_address_id, in_active };
 };
 
